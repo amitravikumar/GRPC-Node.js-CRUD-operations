@@ -1,11 +1,14 @@
 syntax = "proto3";
 
 service NoteService {
-    rpc List(Empty) returns (NoteList) {}
-    rpc Insert(Note) returns (Note) {}
+    rpc List (Empty) returns (NoteList) {}
+    rpc Get (NoteRequestId) returns (Note) {}
+    rpc Insert (Note) returns (Note) {}
+    rpc Update (Note) returns (Note) {}
+    rpc Delete (NoteRequestId) returns (Empty) {}
 }
 
-message Empty{}
+message Empty {}
 
 message Note {
     string id = 1;
@@ -15,4 +18,8 @@ message Note {
 
 message NoteList {
     repeated Note notes = 1;
+}
+
+message NoteRequestId {
+    string id = 1;
 }
