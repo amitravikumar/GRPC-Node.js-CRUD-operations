@@ -1,0 +1,15 @@
+{
+  "name": "grpc-nodejs-crud-operations",
+  "version": "1.0.0",
+  "description": "CRUD operations for GRPC in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amit Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "grpc": "^1.24.4",
+    "uuid": "^8.3.2"
+  }
+}
